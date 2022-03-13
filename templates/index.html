@@ -1,20 +1,25 @@
 <html>
 
 <head>
-	<link rel="stylesheet" href={{ url_for('static', filename='style.css' ) }} />
+    <link rel="stylesheet" href={{ url_for( 'static', filename='style.css' ) }} />
 </head>
 
 <body>
-	<a href="/logout">Log out</a>
-	<h1>Movie Explorer</h1>
-	<h2>{{title}}</h2>
-	<h3>{{tagline}}</h3>
-	<p>Genres: {{genre}}</p>
-	<div>
-		<img src="{{poster_image}}" width=500 height=700 />
-	</div>
-	<a href="{{wiki_url}}"> Click here to see Wikipedia page! </a>
+    <h1> WELCOME TO: TYROGET'S MOVIE TRENDS</h1>
 
+	<p> </p>
+    <div class='container'>
+    <div class='container'>
+	<h2> {{ title }} </h2>
+
+	<img src="{{poster_image}}" width=500 height=700 />
+	<div class='container'>
+	<h3><b>"{{ tagline }}"</b></h3>
+	<p class="uppercase"> GENRES: {{ genre }}</p>
+	<a href="{{ wiki_url }}">CLICK HERE TO SEE WIKIPEDIA PAGE!</a>
+    </div>
+
+    <h4> MOVIE REVIEWS </h4>
 	<div class="feedback"> 
 	<form method="POST" action="/rate">
 		<p>
