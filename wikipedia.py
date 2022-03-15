@@ -1,6 +1,6 @@
-import os
+"""wikipedia API"""
+
 import requests
-import json
 
 
 def get_wiki_link(movie_name):

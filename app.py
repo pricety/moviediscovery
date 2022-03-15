@@ -1,5 +1,9 @@
-import flask
+"""
+file to fun the app
+"""
+
 import os
+import flask
 from flask_sqlalchemy import SQLAlchemy
 from dotenv import find_dotenv, load_dotenv
 
