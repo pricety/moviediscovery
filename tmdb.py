@@ -1,8 +1,7 @@
+"""this file gets info from tmdb"""
+
 import os
 import requests
-import base64
-import random
-import json
 
 from dotenv import load_dotenv, find_dotenv
 
@@ -12,7 +11,7 @@ IMAGE_BASE_URL = "https://image.tmdb.org/t/p/"
 POSTER_SIZE = "w500"
 
 
-def get_movie_data(movie_id):
+def get_movie_data(movie_id): # pylint: disable=missing-function-docstring
     response = requests.get(
         f"https://api.themoviedb.org/3/movie/{movie_id}",
         params={

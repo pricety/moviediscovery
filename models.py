@@ -1,14 +1,23 @@
-from app import db
-from flask_login import UserMixin
-from dataclasses import dataclass
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+# pylint: disable=no-member
 
-class User(db.Model, UserMixin):
+"""
+file containing database tables
+"""
+
+from dataclasses import dataclass
+from flask_login import UserMixin
+from app import db
+
+# pylint: disable=too-few-public-methods
+class User(db.Model, UserMixin): # pylint: disable=missing-class-docstring
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(80), unique=True, nullable=False)
 
 @dataclass
-class Rating(db.Model):
-    id: int
+class Rating(db.Model): # pylint: disable=missing-class-docstring
+    id: int # pylint: disable=invalid-name
     rating: int
     comment: str
     username: str
